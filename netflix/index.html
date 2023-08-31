@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background-color: #212529;
+    }
+
+    .logo {
+      width: 100px;
+      height: 40px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    header {
+      height: 40px;
+      z-index: 5;
+    }
+
+    .box {
+      width: 38px;
+      height: 38px;
+      border: 1px solid black;
+      background-color: blue;
+    }
+
+    .content {
+      margin-top: -40px;
+    }
+
+    .movie-img {
+      width: 100%;
+    }
+
+    .movie {
+      color: #fff;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px;
+      width: 40%;
+    }
+
+    .movie-name {
+      font-size: 140px;
+    }
+
+    .home-demo .item {
+      background: transparent;
+    }
+
+    .home-demo h2 {
+      color: #fff;
+      text-align: center;
+      padding: 5rem 0;
+      margin: 0;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .owl-prev span {
+      display: inline-block;
+      top: -8px;
+      left: 3px;
+      position: absolute;
+    }
+
+    .owl-next span {
+      display: inline-block;
+      top: -8px;
+      right: 3px;
+      position: absolute;
+    }
+
+    .owl-prev,
+    .owl-next {
+      display: flex;
+      position: absolute;
+      transform: scale(4) !important;
+      background: #22222230 !important;
+      width: 12px;
+      height: 12px;
+    }
+
+    .owl-prev {
+      top: 120px;
+      left: -40px;
+    }
+
+    .owl-next {
+      top: 120px;
+      right: -40px;
+    }
+
+    .owl-prev:hover,
+    .owl-next:hover {
+      background: #22222290 !important;
+    }
+
+    .owl-dots {
+      display: none;
+    }
+
+    .card {
+      position: relative;
+      border: 0;
+      border-radius: 10px !important;
+      overflow: hidden;
+    }
+
+    .card-hover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform: translate(0, 300px);
+      z-index: 20;
+      transition: all 0.3s;
+      background: #212529;
+    }
+
+    .card:hover .card-hover {
+      transform: translate(0, 0px);
+    }
+
+    .slider {
+      margin-left: 70px;
+    }
+
+    .row h3 {
+      color: #fff;
+      padding: 0 0 8px 70px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="bg-transparent text-white sticky-top">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-start justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-start mb-2 mb-lg-0 text-white logo">
+          <img src="img/netflix-svgrepo-com.svg" alt="" class="logo" />
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="anasayfa/index.html" class="nav-link px-2 text-white">Ana Sayfa</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Diziler</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Filmler</a></li>
+          <li>
+            <a href="#" class="nav-link px-2 text-white">Yeni ve Populer</a>
+          </li>
+          <li><a href="#" class="nav-link px-2 text-white">Listem</a></li>
+          <li>
+            <a href="#" class="nav-link px-2 text-white">Dile Gore Goz At</a>
+          </li>
+        </ul>
+
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+        <div class="text-end">
+          <button type="button" class="box">:)</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <img src="img/56ef9d5b67b0a94ef0787a28.webp" alt="" class="movie-img" />
+    <div class="movie">
+      <h1 class="movie-name">Teen Wolf</h1>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+        similique corporis unde provident excepturi nisi aliquam, minima odio
+        nihil necessitatibus doloribus modi rem dignissimos totam quasi!
+        Quibusdam deserunt porro quis!
+      </p>
+      <div class="d-flex justify-content-center gap-3">
+        <button class="btn btn-light">
+          <i class="fa-solid fa-play"></i>Oynat
+        </button>
+        <button class="btn btn-secondary">
+          <i class="fa-solid fa-circle-info"></i>Daha Fazla Bilgi
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center my-5">
+    <div class="col-11 slider">
+      <div class="home-demo">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card1.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card2.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card3.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card4.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card5.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card6.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card7.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card8.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center my-5">
+    <h3>Netflixte populer</h3>
+    <div class="col-11 slider">
+      <div class="home-demo">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card1.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card2.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card3.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card4.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card5.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card6.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card7.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card8.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center my-5">
+    <h3>Gundemdekiler</h3>
+    <div class="col-11 slider">
+      <div class="home-demo">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card1.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card2.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card3.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card4.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card5.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card6.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card7.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card8.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center my-5">
+    <div class="col-11 slider">
+      <div class="home-demo">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card1.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card2.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card3.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card4.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card5.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card6.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card7.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card8.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center my-5">
+    <div class="col-11 slider">
+      <div class="home-demo">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card1.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card2.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card3.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card4.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card5.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card6.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card7.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-bg-dark">
+              <img src="img/card8.jpg" class="card-img-top w-100" alt="..." />
+
+              <div class="card-hover">
+                <div class="card text-bg-dark h-100">
+                  <div class="card-body d-flex justify-content-between flex-column">
+                    <div>
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                    </div>
+                    <p class="card-text" style="font-size: 12px">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <p class="card-text" style="font-size: 12px">140dk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    var owl = $(".owl-carousel");
+    owl.owlCarousel({
+      margin: 10,
+      loop: false,
+      nav: false,
+      autoplay: false,
+      autoplayTimeout: 1000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 6,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
